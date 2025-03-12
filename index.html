@@ -9,35 +9,11 @@
 </head>
 
 <body>
-    <audio id="bg-music" autoplay loop>
+    <audio id="bg-music" loop preload="auto">
         <source src="ambience.mp3" type="audio/mpeg">
     </audio>
 
     <div id="overlay"><h1 class="centered">click anywhere to initiate the connection</h1></div>
-
-    <script>
-        document.addEventListener("click", () => {
-            // Play music
-            const audio = document.getElementById("bg-music");
-            audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
-            // Fade to green, then fade out
-            const overlay = document.getElementById("overlay");
-    
-            // First, change the background to green
-            overlay.style.backgroundColor = "green";
-    
-            // Then, after 1 second (green fade), start fading out
-            setTimeout(() => {
-                overlay.style.opacity = "0";  // Start fading out
-            }, 1700); // 1s before starting the fade out
-    
-            // Remove overlay after fade-out
-            setTimeout(() => {
-                overlay.style.display = "none";  // Hide overlay after fade out
-            }, 2200);  // 1.5s to match the total duration
-        }, { once: true });
-    </script>
 
     <header>
         <h1>L.A.Z.E.R. V5.5</h1>
@@ -420,6 +396,8 @@
         project L.A.Z.E.R. &copy; 2037 <span class="glitch">ENCRYPTED
             CONNECTION</span> | System purge: <span id="system-purge">14</span> hours remaining
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
