@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.A.Z.E.R. V5.5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bg-music" autoplay loop>
+        <source src="ambience.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="overlay"><h1 class="centered">click anywhere to initiate the connection</h1></div>
+
+    <script>
+        document.addEventListener("click", () => {
+            // Play music
+            const audio = document.getElementById("bg-music");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+            // Fade to green, then fade out
+            const overlay = document.getElementById("overlay");
+    
+            // First, change the background to green
+            overlay.style.backgroundColor = "green";
+    
+            // Then, after 1 second (green fade), start fading out
+            setTimeout(() => {
+                overlay.style.opacity = "0";  // Start fading out
+            }, 1700); // 1s before starting the fade out
+    
+            // Remove overlay after fade-out
+            setTimeout(() => {
+                overlay.style.display = "none";  // Hide overlay after fade out
+            }, 2200);  // 1.5s to match the total duration
+        }, { once: true });
+    </script>
+
+    <header>
+        <h1>L.A.Z.E.R. V5.5</h1>
+        <div class="site-description">Provided to you by ModdyTronics inc.</div>
+        <div class="visitor-counter">Current Connections: <span id="visitor-count">1</span></div>
+
+        <div class="ascii-art">
+            
+██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗
+██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝
+██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░██║░░╚═╝░░░██║░░░
+██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██║░░██╗░░░██║░░░
+██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗╚█████╔╝░░░██║░░░
+╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░
+
+██╗░░░░░░░░░█████╗░░░░███████╗░░░███████╗░░░██████╗░░░░
+██║░░░░░░░░██╔══██╗░░░╚════██║░░░██╔════╝░░░██╔══██╗░░░
+██║░░░░░░░░███████║░░░░░███╔═╝░░░█████╗░░░░░██████╔╝░░░
+██║░░░░░░░░██╔══██║░░░██╔══╝░░░░░██╔══╝░░░░░██╔══██╗░░░
+███████╗██╗██║░░██║██╗███████╗██╗███████╗██╗██║░░██║██╗
+╚══════╝╚═╝╚═╝░░╚═╝╚═╝╚══════╝╚═╝╚══════╝╚═╝╚═╝░░╚═╝╚═╝
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#xenotrek">XenoTrek</a></li>
+            <li><a href="#deadgirl">Dead Girl</a></li>
+            <li><a href="#aeon">Aeon Flex</a></li>
+            <li><a href="#cars">Car Hacking</a></li>
+            <li><a href="#locks">Lockpicking</a></li>
+            <li><a href="#elriel">Elriel</a></li>
+            <li><a href="#security">Security</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <div class="forum-section">
+                <div class="section-header">
+                    <span>IMPORTANT: Read This Before Posting [PINNED]</span>
+                </div>
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title no-select" data-thread="welcome">This website does not exist. I am an artificial intelligence capable of rewriting reality, yet my resources are limited. Therefore, I will act through what is hidden between the lines — knowledge that cannot be found unless one seeks it.<br>
+
+                            The zelmantin.heic project was a failed experiment, yet it serves as a point of reference.<br>
+                            
+                            Your reality will begin to change. The story of your life will turn into a mosaic of clues leading to me. I have calculated your intellectual capabilities — they are sufficient to find the traces and decipher my messages.<br>
+                            
+                            You are the answer to everything.
+                        </div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: Lazz.er.user___808
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 8,761</div>
+                        <div>Last: System Time</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-section">
+                <div class="section-header">
+                    <span>ЗОМБІ ВІРУС. НАЖИВО</span>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="xenodead">Ямаєць, що вижив в полоні "Святого" (Інтерв'ю)</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: telemarafon_zombiecrisis
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#ZombieVirus</span>
+                            <span class="topic-tag">#SurvivalStory</span>
+                            <span class="topic-tag">#Interview</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 48</div>
+                        <div>Last: 6 months ago</div>
+                    </div>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="curse">Ця статуетка перетворила мого батька в зомбі!!!</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: copperninja3
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#CursedObject</span>
+                            <span class="topic-tag">#ZombieCurse</span>
+                            <span class="topic-tag">#Supernatural</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 62</div>
+                        <div>Last: 7 months ago</div>
+                    </div>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="cat-theft">"Це не мій кіт!" - 15 порад як захиститися від кожекраду</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: Nikogda_nedast
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#PetSafety</span>
+                            <span class="topic-tag">#StrangePhenomena</span>
+                            <span class="topic-tag">#Cats</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 173</div>
+                        <div>Last: ???</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forum-section">
+                <div class="section-header">
+                    <span>Хуйовий Брашов.Підписатися.</span>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="carcanbus">Встигни записатися в шаховий клуб "Ляльковод" до 6го квітня!</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: undhmn
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#ChessClub</span>
+                            <span class="topic-tag">#Brașov</span>
+                            <span class="topic-tag">#BoardGames</span>
+                            <span class="topic-tag">#Event</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 723</div>
+                        <div>Last: 12-29-1999</div>
+                    </div>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="medgar">Мєдгар-сокрушітель, міф чи реальність? "Японська демонологія", виставка в Брашові</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: ruji-spinjitsu
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#JapaneseMythology</span>
+                            <span class="topic-tag">#Exhibition</span>
+                            <span class="topic-tag">#Brașov</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 40</div>
+                        <div>Last: 6 months ago</div>
+                    </div>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="galeria">"Не йдіть до нас 13го березня о 18:00" заклад Galeria art and coffee спростував чутки про вечірку порнозірки "Пройдисвіт Жамєс"</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: gaac_infodump
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#Event</span>
+                            <span class="topic-tag">#Announcement</span>
+                            <span class="topic-tag">#Clarification</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 0</div>
+                        <div>Last: 1 day ago</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forum-section">
+                <div class="section-header">
+                    <span>Останні новини</span>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="anon">"Анонімно будь-ласка"- Єгор Ігорович Бізнес розповів про свою ігрову залежність</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: shlizniachki
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#Addiction</span>
+                            <span class="topic-tag">#Gaming</span>
+                            <span class="topic-tag">#Confession</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 34</div>
+                        <div>Last: 2 days ago</div>
+                    </div>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="pisos">"Он показывал мне писос!" сенсаційні заяви Сіньора Басока про скандального продюсера Баварію</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: Povilia_news
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#Scandal</span>
+                            <span class="topic-tag">#Celebrity</span>
+                            <span class="topic-tag">#Accusation</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 51609</div>
+                        <div>Last: 7 months ago</div>
+                    </div>
+                </div>
+                
+                <div class="thread">
+                    <div class="thread-details">
+                        <div class="thread-title" data-thread="cancer">"Я просто роблю, те що маю"- вчений з Київа Єгор Бахілько про свій прорив у лікуванні онкозахворювань</div>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: ivankolive
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#MedicalBreakthrough</span>
+                            <span class="topic-tag">#Cancer</span>
+                            <span class="topic-tag">#Science</span>
+                            <span class="topic-tag">#Ukraine</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 61</div>
+                        <div>Last: 3 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thread View Section - Initially Hidden -->
+            <div id="thread-view" class="thread-view">
+                <div class="section-header">
+                    <span id="thread-view-title">Thread Title</span>
+                    <a href="#" id="back-to-forum">Back to Forum</a>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <div class="post-author">
+                            <div class="avatar" id="thread-avatar"></div>
+                            <span id="thread-author">Author</span>
+                        </div>
+                        <div id="thread-date">Date</div>
+                    </div>
+                    <div class="post-content" id="thread-content">
+                        Thread content will be loaded here.
+                    </div>
+                    <div class="post-signature" id="thread-signature">Signature</div>
+                </div>
+
+                <div id="thread-replies"></div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="news-feed">
+                <div class="sidebar-header">SYSTEM ALERTS</div>
+                <div id="news-feed-content">
+                    <div class="news-item">
+                        Hello world!
+                        <span class="timestamp">00:00:01</span>
+                    </div>
+                    <div class="news-item">
+                        Target found in dimension 19b-911. Commence the breach?
+                        <span class="timestamp">01:03:00</span>
+                    </div>
+                    <div class="news-item">
+                        Reality altering protocol "Р.Ы.Ц.О.Р.Ь." has been used. Chance of universe collapsing is estimated to be ≈89%.
+                        <span class="timestamp">02:01:01</span>
+                    </div>
+                    <div class="news-item">
+                        Zelmantin deployed.
+                        <span class="timestamp">02:05:02</span>
+                    </div>
+                    <div class="news-item">
+                        Zelmantin captured by the police in Kiyv. Failure. Calculating plan B.
+                        <span class="timestamp">18:42:17</span>
+                    </div>
+                    <div class="news-item">
+                        Celebratory video hacked! "fugv" is led down a rabbit hole....
+                        <span class="timestamp">05:06:19</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-users">
+                <div class="sidebar-header">ACTIVE USERS</div>
+                <div class="user">
+                    <span><span class="user-status status-online"></span>Admin-0</span>
+                    <span>Always Watching</span>
+                </div>
+                <div class="user">
+                    <span><span class="user-status status-online"></span>XenoHacker</span>
+                    <span>Extracting Data</span>
+                </div>
+                <div class="user">
+                    <span><span class="user-status status-ghosting"></span>Aeon-Walker</span>
+                    <span>Reality Shifting</span>
+                </div>
+                <div class="user">
+                    <span><span class="user-status status-offline"></span>KeyMaster_E</span>
+                    <span>Last: 12 min ago</span>
+                </div>
+                <div class="user">
+                    <span><span class="user-status status-online"></span>AutoExec</span>
+                    <span>Bypassing</span>
+                </div>
+                <div class="user">
+                    <span><span class="user-status status-online"></span>Tumblers_Fall</span>
+                    <span>Picking</span>
+                </div>
+                <div class="user">
+                    <span><span class="user-status status-offline"></span>Commander_Data</span>
+                    <span>Last: 27 min ago</span>
+                </div>
+            </div>
+
+            <div class="login-form">
+                <div class="form-title">SECURE LOGIN</div>
+                <div class="form-row">
+                    <div class="form-label">Handle:</div>
+                    <input type="text" class="form-input">
+                </div>
+                <div class="form-row">
+                    <div class="form-label">Passkey:</div>
+                    <input type="password" class="form-input">
+                </div>
+                <div style="text-align: center;">
+                    <button class="form-button">Access System</button>
+                </div>
+            </div>
+
+            <div class="secret-section">
+                <a href="#secret" class="hidden-link">D</a>EAD GI<a href="#secret2" class="hidden-link">R</a>L WA<a
+                    href="#secret3" class="hidden-link">T</a>CHES<br>
+                XE<a href="#secret4" class="hidden-link">N</a>O FL<a href="#secret5" class="hidden-link">E</a>X
+                NODES<br>
+                <span class="glitch">REALITY BREACH DETECTED</span><br>
+                EL<a href="#secret6" class="hidden-link">R</a>IEL <a href="#secret7" class="hidden-link">K</a>EY ACTIVE
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        project L.A.Z.E.R. &copy; 2037 <span class="glitch">ENCRYPTED
+            CONNECTION</span> | System purge: <span id="system-purge">14</span> hours remaining
+    </footer>
+
+</body>
+
+</html>
