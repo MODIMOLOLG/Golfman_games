@@ -9,17 +9,25 @@
 </head>
 
 <body>
-    <audio id="bg-music" loop preload="auto">
+    <audio id="bg-music0" loop preload="auto">
         <source src="ambience.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bg-music1" loop preload="auto">
+        <source src="ambience1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bg-music2" loop preload="auto">
+        <source src="ambience2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="NewMessageSound" preload="auto">
+        <source src="NewMessageSound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="IncorrectSound" preload="auto">
+        <source src="IncorrectSound.mp3" type="audio/mpeg">
     </audio>
 
     <div id="overlay"><h1 class="centered">click anywhere to initiate the connection</h1></div>
 
     <header>
-        <h1>L.A.Z.E.R. V5.5</h1>
-        <div class="site-description">Provided to you by ModdyTronics inc.</div>
-        <div class="visitor-counter">Current Connections: <span id="visitor-count">1</span></div>
-
         <div class="ascii-art">
             
 ██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗
@@ -36,19 +44,10 @@
 ███████╗██╗██║░░██║██╗███████╗██╗███████╗██╗██║░░██║██╗
 ╚══════╝╚═╝╚═╝░░╚═╝╚═╝╚══════╝╚═╝╚══════╝╚═╝╚═╝░░╚═╝╚═╝
         </div>
+        <h1>L.A.Z.E.R. V5.5</h1>
+        <div class="site-description">Provided to you by ModdyTronics inc.</div>
+        <div class="visitor-counter" id="visitorCounter">Current Connections: 1</div>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#xenotrek">XenoTrek</a></li>
-            <li><a href="#deadgirl">Dead Girl</a></li>
-            <li><a href="#aeon">Aeon Flex</a></li>
-            <li><a href="#cars">Car Hacking</a></li>
-            <li><a href="#locks">Lockpicking</a></li>
-            <li><a href="#elriel">Elriel</a></li>
-            <li><a href="#security">Security</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
         <main>
@@ -58,7 +57,7 @@
                 </div>
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title no-select" data-thread="welcome">This website does not exist. I am an artificial intelligence capable of rewriting reality, yet my resources are limited. Therefore, I will act through what is hidden between the lines — knowledge that cannot be found unless one seeks it.<br>
+                        <div class="thread-text">This website does not exist. I am an artificial intelligence capable of rewriting reality, yet my resources are limited. Therefore, I will act through what is hidden between the lines — knowledge that cannot be found unless one seeks it.<br>
 
                             The zelmantin.heic project was a failed experiment, yet it serves as a point of reference.<br>
                             
@@ -72,9 +71,27 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="forum-section" id="LevelWaitContent">
+                <div class="section-header">
+                    <span>СРОЧНОЕ ВКЛЮЧЕНИЕ</span>
+                </div>
+                <div class="thread">
+                    <div class="thread-details">
+                        <a href="https://1drv.ms/v/c/97d41c7c104cad68/EX2lcZbd9rhPrGyfUvMhJ2MBcsqQPqdUhIN1Mw3AcuOetw">
+                            <div class="thread-title">SrochnojeVkluchenije.heic</div>
+                        </a>
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: ModdyMalls
+                            </div>
+                        </div>
+                    </div>
                     <div class="thread-activity">
-                        <div>Views: 8,761</div>
-                        <div>Last: System Time</div>
+                        <div>Views: 0</div>
+                        <div>Last: ???</div>
                     </div>
                 </div>
             </div>
@@ -86,7 +103,9 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="xenodead">Ямаєць, що вижив в полоні "Святого" (Інтерв'ю)</div>
+                        <a href="">
+                            <div class="thread-title">Ямаєць, що вижив в полоні "Святого" (Інтерв'ю)</div>
+                        </a>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: telemarafon_zombiecrisis
@@ -106,7 +125,7 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="curse">Ця статуетка перетворила мого батька в зомбі!!!</div>
+                        <div class="thread-title">Ця статуетка перетворила мого батька в зомбі!!!</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: copperninja3
@@ -126,7 +145,7 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="cat-theft">"Це не мій кіт!" - 15 порад як захиститися від кожекраду</div>
+                        <div class="thread-title">"Це не мій кіт!" - 15 порад як захиститися від кожекраду</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: Nikogda_nedast
@@ -152,7 +171,7 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="carcanbus">Встигни записатися в шаховий клуб "Ляльковод" до 6го квітня!</div>
+                        <div class="thread-title">Встигни записатися в шаховий клуб "Ляльковод" до 6го квітня!</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: undhmn
@@ -173,7 +192,7 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="medgar">Мєдгар-сокрушітель, міф чи реальність? "Японська демонологія", виставка в Брашові</div>
+                        <div class="thread-title">Мєдгар-сокрушітель, міф чи реальність? "Японська демонологія", виставка в Брашові</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: ruji-spinjitsu
@@ -193,7 +212,7 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="galeria">"Не йдіть до нас 13го березня о 18:00" заклад Galeria art and coffee спростував чутки про вечірку порнозірки "Пройдисвіт Жамєс"</div>
+                        <div class="thread-title">"Не йдіть до нас 13го березня о 18:00" заклад Galeria art and coffee спростував чутки про вечірку порнозірки "Пройдисвіт Жамєс"</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: gaac_infodump
@@ -214,12 +233,33 @@
             
             <div class="forum-section">
                 <div class="section-header">
-                    <span>Останні новини</span>
+                    <span>Latest News</span>
                 </div>
-                
+                <div class="thread DisabledOnLoad" id="Level1content2">
+                    <div class="thread-details">
+                        <a href="https://youtu.be/cQAEnFLayds?si=fV-xM87_syDMovzc">
+                            <div class="thread-title">ZELMANTIN INTERVIEV</div>
+                        </a>
+                        
+                        <div class="thread-meta">
+                            <div class="thread-author">
+                                POSTED BY: IhorBullgure
+                            </div>
+                        </div>
+                        <div>
+                            <span class="topic-tag">#Interviev</span>
+                            <span class="topic-tag">#Zelmantin</span>
+                            <span class="topic-tag">#Viral</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div>Views: 0</div>
+                        <div>Last: 1 second ago</div>
+                    </div>
+                </div>
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="anon">"Анонімно будь-ласка"- Єгор Ігорович Бізнес розповів про свою ігрову залежність</div>
+                        <div class="thread-title">"Анонімно будь-ласка"- Єгор Ігорович Бізнес розповів про свою ігрову залежність</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: shlizniachki
@@ -239,7 +279,7 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="pisos">"Он показывал мне писос!" сенсаційні заяви Сіньора Басока про скандального продюсера Баварію</div>
+                        <div class="thread-title">"Он показывал мне penis!" сенсаційні заяви Сіньора Басок про скандального продюсера Баварію</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: Povilia_news
@@ -259,7 +299,7 @@
                 
                 <div class="thread">
                     <div class="thread-details">
-                        <div class="thread-title" data-thread="cancer">"Я просто роблю, те що маю"- вчений з Київа Єгор Бахілько про свій прорив у лікуванні онкозахворювань</div>
+                        <div class="thread-title">"Я просто роблю, те що маю"- вчений з Київа Єгор Бахілько про свій прорив у лікуванні онкозахворювань</div>
                         <div class="thread-meta">
                             <div class="thread-author">
                                 POSTED BY: ivankolive
@@ -323,61 +363,35 @@
                         Zelmantin deployed.
                         <span class="timestamp">02:05:02</span>
                     </div>
-                    <div class="news-item">
-                        Zelmantin captured by the police in Kiyv. Failure. Calculating plan B.
-                        <span class="timestamp">18:42:17</span>
+                    <div id="Level0content" class="DisabledOnLoad">
+                        <div class="news-item evil">
+                            Celebratory video hacked! "fugv" is led down a rabbit hole....
+                            <span class="timestamp evil">05:06:19</span>
+                        </div>                    
                     </div>
-                    <div class="news-item">
-                        Celebratory video hacked! "fugv" is led down a rabbit hole....
-                        <span class="timestamp">05:06:19</span>
+                    <div id="Level1content" class="DisabledOnLoad">
+                        <div class="news-item evil">
+                            Zelmantin captured by the police in Kiyv. Failure. Calculating plan B.
+                            <span class="timestamp evil">18:42:17</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="recent-users">
-                <div class="sidebar-header">ACTIVE USERS</div>
-                <div class="user">
-                    <span><span class="user-status status-online"></span>Admin-0</span>
-                    <span>Always Watching</span>
-                </div>
-                <div class="user">
-                    <span><span class="user-status status-online"></span>XenoHacker</span>
-                    <span>Extracting Data</span>
-                </div>
-                <div class="user">
-                    <span><span class="user-status status-ghosting"></span>Aeon-Walker</span>
-                    <span>Reality Shifting</span>
-                </div>
-                <div class="user">
-                    <span><span class="user-status status-offline"></span>KeyMaster_E</span>
-                    <span>Last: 12 min ago</span>
-                </div>
-                <div class="user">
-                    <span><span class="user-status status-online"></span>AutoExec</span>
-                    <span>Bypassing</span>
-                </div>
-                <div class="user">
-                    <span><span class="user-status status-online"></span>Tumblers_Fall</span>
-                    <span>Picking</span>
-                </div>
-                <div class="user">
-                    <span><span class="user-status status-offline"></span>Commander_Data</span>
-                    <span>Last: 27 min ago</span>
                 </div>
             </div>
 
             <div class="login-form">
                 <div class="form-title">SECURE LOGIN</div>
                 <div class="form-row">
-                    <div class="form-label">Handle:</div>
-                    <input type="text" class="form-input">
+                    <div class="form-label">Login:</div>
+                    <input type="text" id="username" class="form-input">
                 </div>
+                <div class="form-alert" id="LoginAlert"></div>
                 <div class="form-row">
-                    <div class="form-label">Passkey:</div>
-                    <input type="password" class="form-input">
+                    <div class="form-label">Password:</div>
+                    <input type="password" id="password" class="form-input">
                 </div>
+                <div class="form-alert" id="PasswordAlert"></div>
                 <div style="text-align: center;">
-                    <button class="form-button">Access System</button>
+                    <button class="form-button" onclick="handleLogin()">Access System</button>
                 </div>
             </div>
 
