@@ -129,6 +129,14 @@ function handleLogin() {
         audio2.pause();
         audio0.pause();
         audioNew.play();
+        switch (FugvLevel) {
+            case 1:
+                level1();
+                break;
+            case 2:
+
+                break;
+        }
     } else {
         audioWrong.play();
         if (username != validUser) {
@@ -147,6 +155,11 @@ function level1() {
     document.getElementById("Level1content").style.display = "block";
     setTimeout(() => {
         document.getElementById("Level1content2").style.display = "block";
+        audioNew.play();
     }, 4000);
-    audio1.play();
+    setTimeout(() => {
+        
+        audio1.play();
+    }, 1000);
+    
 }
