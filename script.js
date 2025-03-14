@@ -5,6 +5,11 @@ const audio1 = document.getElementById("bg-music1");
 const audio2 = document.getElementById("bg-music2");
 const audioNew = document.getElementById("NewMessageSound");
 const audioWrong = document.getElementById("IncorrectSound");
+
+audio0.volume = 0.1;
+audio1.volume = 0.1;
+audio2.volume = 0.1;
+
 document.addEventListener("click", () => {
     let FugvLevel = localStorage.getItem("FugvLevel");
 
@@ -18,7 +23,6 @@ document.addEventListener("click", () => {
     switch (FugvLevel) {
         case 0:
             audio0.play();
-            audio0.volume = 0.3; 
             break;
         case 1:
             audio1.play();
@@ -65,7 +69,7 @@ document.addEventListener("click", () => {
         
     }
     if(FugvLevel > 1){
-        document.getElementById("Level2content").style.display = "block";
+        document.body.innerHTML = 'Fail. this website does not exist.';
     } 
 
 }, { once: true });
@@ -134,7 +138,7 @@ function handleLogin() {
                 level1();
                 break;
             case 2:
-
+                level2();
                 break;
         }
     } else {
@@ -158,8 +162,14 @@ function level1() {
         audioNew.play();
     }, 4000);
     setTimeout(() => {
-        
         audio1.play();
     }, 1000);
     
+}
+
+function level2() {
+    setTimeout(() => {
+        document.body.innerHTML = 'Fail. this website does not exist.';
+        window.Location.href = "https://1drv.ms/f/c/97d41c7c104cad68/EjdDhHN9kbtLt9dPoRYLsdIBV0ksN5RIyFwALPBWkusv_g?e=CwkdIh";
+    }, 1000);
 }
