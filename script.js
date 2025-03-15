@@ -68,7 +68,7 @@ document.addEventListener("click", () => {
         document.getElementById("Level1content2").style.display = "block";
         
     }
-    if(FugvLevel > 1){
+    if(FugvLevel > 2){
         document.body.innerHTML = 'Fail. this website does not exist.';
     } 
 
